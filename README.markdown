@@ -40,6 +40,8 @@ Install `pi-lights-homekit.service` to `~/.config/systemd/user/pi-lights-homekit
 $ sudo usermod -a -G kmem gpio pi
 ```
 
+(Note that I had to restart the Pi before the above command would take effect on systemd.)
+
 Then reload systemd:
 
 ```terminal
