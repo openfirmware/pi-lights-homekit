@@ -1,0 +1,20 @@
+[Unit]
+Description=HomeKit app for Pi Lights
+After=network.target
+
+[Service]
+# Foreground process (do not use --daemon in ExecStart or config.rb)
+Type=simple
+
+# Preferably configure a non-privileged user
+User=pi
+
+# Specify the path to your puma application root
+WorkingDirectory=/home/pi/pi-lights-homekit
+
+ExecStart=/usr/local/rvm/gems/ruby-2.5.1/wrappers/ruby app.rb
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
