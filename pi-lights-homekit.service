@@ -6,9 +6,6 @@ After=network.target
 # Foreground process (do not use --daemon in ExecStart or config.rb)
 Type=simple
 
-# Preferably configure a non-privileged user
-User=pi
-
 # Specify the path to your puma application root
 WorkingDirectory=/home/pi/pi-lights-homekit
 
